@@ -10,7 +10,7 @@ function ShopList(props) {
                 <h5 className="card-title">{carName}</h5>
                 <p className="card-text">Model:{model}</p>
                 <p className="card-text">Year:{year}</p>
-                <p className="card-text">Price: {price}/-</p>
+                <p className="card-text">Price: {price}</p>
                 <Link className="btn btn-mute" style={{ backgroundColor: "#282c4c", color: "#ffac3c" }}to={"/itemdetails/"+_id} element={<ItemDetails />}>View</Link>
               </div>
             </div>
