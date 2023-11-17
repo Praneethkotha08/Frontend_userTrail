@@ -28,9 +28,9 @@ function Footer(){
     <div class="col mb-3">
       <h5>Connect Us</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 yellow"><i className="fa fa-facebook p-2"></i>Facebook</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 yellow"><i className="fa fa-instagram p-2"></i>Instagram</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 yellow"><i className="fa fa-twitter p-2"></i>Twitter</a></li>
+        <li class="nav-item mb-2"><a href="https://m.facebook.com/" class="nav-link p-0 yellow"><i className="fa fa-facebook p-2"></i>Facebook</a></li>
+        <li class="nav-item mb-2"><a href="https://www.instagram.com/edrivespacecars/" class="nav-link p-0 yellow"><i className="fa fa-instagram p-2"></i>Instagram</a></li>
+        <li class="nav-item mb-2"><a href="https://x.com/eDriveSpace?t=yBBoF69OnFSjCUp8RdsSdA&s=09" class="nav-link p-0 yellow"><i className="fa fa-twitter p-2"></i>Twitter</a></li>
       </ul>
     </div>
     <div class="col mb-3">
