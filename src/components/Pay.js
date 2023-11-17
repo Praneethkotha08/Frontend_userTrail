@@ -12,7 +12,7 @@ function Pay(props) {
  
 
       useEffect(() => {
-        Axios.get(`https://project-final-backend-bq77.onrender.com/useRoute/${id}`)
+        Axios.get(`https://backendss-uvix.onrender.com/useRoute/${id}`)
           .then((res) => {
             if (res.status === 200) {
               const {  carName, model, price, year } = res.data;
@@ -24,7 +24,7 @@ function Pay(props) {
           .catch((err) => alert(err));
       }, [id]);
       const [name,setName]=useState('');
-      const [email,setemail]=useState('');
+      const email=localStorage.getItem("email");
       const [mobile,setMobile]=useState('');
       const handleSubmit = () => {
         const data = {
@@ -36,7 +36,7 @@ function Pay(props) {
           price: arr.price,
         };
       
-        Axios.post("https://project-final-backend-bq77.onrender.com/userRoute/register", data)
+        Axios.post("https://backendss-uvix.onrender.com/userRoute/register", data)
           .then((res) => {
             if (res.status === 200) {
             } else {
@@ -58,7 +58,7 @@ function Pay(props) {
         </div>
         <div class="mb-3">
             <label for="email" class="form-label"> Email:</label>
-            <input type="email" class="form-control"onChange={(event)=>setemail(event.target.value)}placeholder="Enter Your E-mail" id="email"/>
+            <input type="email" class="form-control" defaultValue={localStorage.getItem("email")}placeholder="Enter Your E-mail" id="email" disabled/>
         </div>
         <div class="mb-3">
             <label for="phno" class="form-label"> Mobile:</label>
@@ -85,4 +85,3 @@ function Pay(props) {
   }
   
   export default Pay;
-  

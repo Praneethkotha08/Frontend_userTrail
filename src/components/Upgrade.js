@@ -3,7 +3,7 @@ import Axios from "axios";
 import {Link} from "react-router-dom";
 function Upgrade(){
     const [name,setName]=useState('');
-    const [email,setemail]=useState('');
+    const email=localStorage.getItem("email");
     const [mobile,setMobile]=useState('');
     const[carName,setcarName]=useState('');
     const[model,setModel]=useState('');
@@ -19,7 +19,7 @@ function Upgrade(){
 
         };
       
-        Axios.post("https://project-final-backend-bq77.onrender.com/upgradeRoute/add-upgrade/", data)
+        Axios.post("https://backendss-uvix.onrender.com/upgradeRoute/add-upgrade/", data)
           .then((res) => {
             if (res.status === 200) {
               alert("Successfully Registered");
@@ -37,7 +37,7 @@ function Upgrade(){
         </div>
         <div class="mb-3">
             <label for="email" class="form-label"> Email:</label>
-            <input type="email" class="form-control"onChange={(event)=>setemail(event.target.value)}placeholder="Enter Your E-mail" id="email"/>
+            <input type="email" class="form-control" defaultValue={localStorage.getItem("email")} placeholder="Enter Your E-mail" id="email" disabled/>
         </div>
         <div class="mb-3">
             <label for="phno" class="form-label"> Mobile:</label>

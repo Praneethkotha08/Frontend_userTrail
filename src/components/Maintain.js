@@ -3,8 +3,9 @@ import Axios from "axios";
 import {Link} from "react-router-dom";
 function Maintain(){
     const [name,setName]=useState('');
-    const [email,setemail]=useState('');
+
     const [mobile,setMobile]=useState('');
+    const email=localStorage.getItem("email");
     const[carName,setcarName]=useState('');
     const[model,setModel]=useState('');
     const[type,setType]=useState('');
@@ -19,7 +20,7 @@ function Maintain(){
 
         };
       
-        Axios.post("https://project-final-backend-bq77.onrender.com/maintainRoute/add-maintain/", data)
+        Axios.post("https://backendss-uvix.onrender.com/maintainRoute/add-maintain/", data)
           .then((res) => {
             if (res.status === 200) {
               alert("Successfully Registered");
@@ -37,7 +38,7 @@ function Maintain(){
         </div>
         <div class="mb-3">
             <label for="email" class="form-label"> Email:</label>
-            <input type="email" class="form-control"onChange={(event)=>setemail(event.target.value)}placeholder="Enter Your E-mail" id="email"/>
+            <input type="email" class="form-control" defaultValue={localStorage.getItem("email")} placeholder="Enter Your E-mail" id="email" disabled/>
         </div>
         <div class="mb-3">
             <label for="phno" class="form-label"> Mobile:</label>

@@ -12,7 +12,7 @@ function Registered() {
   const { id } = useParams();
 
   useEffect(() => {
-    Axios.get(`https://project-final-backend-bq77.onrender.com/useRoute/${id}`)
+    Axios.get(`https://backendss-uvix.onrender.com/useRoute/${id}`)
       .then((res) => {
         if (res.status === 200) {
           const { carName, model, price, img1 } = res.data;

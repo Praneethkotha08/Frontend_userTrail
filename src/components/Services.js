@@ -1,9 +1,32 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 function Services() {
+  const redirectmaintain=()=>{
+    if(localStorage.getItem('islogged')==='true'){
+      window.location.href="/#/maintain";
+    } 
+    else{
+      window.location.href='/#/login';
+    }
+  }
+  const redirectrepair=()=>{
+    if(localStorage.getItem('islogged')==='true'){
+      window.location.href="/#/repair";
+    } 
+    else{
+      window.location.href='/#/login';
+    }
+  }
+  const redirectupgrade=()=>{
+    if(localStorage.getItem('islogged')==='true'){
+      window.location.href="/#/upgrade";
+    } 
+    else{
+      window.location.href='/#/login';
+    }
+  }
   return (
     <div className="container mt-4">
-      <h1 className="text-center yellow py-3">Our Services</h1>
+      <h1 className="text-center yellow">Our Services</h1>
       <div className="row">
         <div className="col-md-4">
           <div className="card mb-4 "style={{backgroundColor:"#ffac3c"}}>
@@ -13,7 +36,7 @@ function Services() {
                 We offer comprehensive car maintenance services such that your
                 vehicle in top condition.
               </p>
-              <Link to="/maintain"> <button class="btn" style={{backgroundColor:"#282c4c", color:"#ffac3c"}}>Book Maintainence</button></Link>
+               <button class="btn btn-mute" style={{ color: "#ffac3c", backgroundColor: "#282c4c" }}onClick={redirectmaintain}>Book  Maintainence</button>
             </div>
           </div>
         </div>
@@ -26,7 +49,7 @@ function Services() {
                 Our skilled technicians provide high-quality car repair
                 services to get you back on the road.
               </p>
-             <Link to="/repair"> <button className="btn"style={{backgroundColor:"#282c4c", color:"#ffac3c"}} >Book a Repair</button></Link>
+            <button className="btn btn-mute" style={{ color: "#ffac3c", backgroundColor: "#282c4c" }}onClick={redirectrepair}>Book a Repair</button>
             </div>
           </div>
         </div>
@@ -39,7 +62,7 @@ function Services() {
                 Enhance your car's performance and appearance with our premium
                 upgrade services.
               </p>
-           <Link to="/upgrade"> <button class="btn" style={{backgroundColor:"#282c4c", color:"#ffac3c"}} >Book a Upgrade</button></Link>
+           <button class="btn btn-mute" style={{ color: "#ffac3c", backgroundColor: "#282c4c" }}onClick={redirectupgrade} >Book a Upgrade</button>
 
             </div>
           </div>

@@ -16,6 +16,8 @@ import Registered from './components/Registerd';
 import Maintain from "./components/Maintain";
 import Repair from "./components/Repair";
 import Upgrade from "./components/Upgrade";
+import Login from "./components/Login";
+import SignIn from './components/SignIn';
 function App() {
   return (
    
@@ -23,6 +25,7 @@ function App() {
      <HashRouter>
       <Nav/>
       <Routes>
+
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/shop" element={<Shop/>}/>
@@ -35,6 +38,8 @@ function App() {
         <Route path="/maintain" element={<Maintain/>}/>
         <Route path="/repair" element={<Repair/>}/>
         <Route path="/upgrade" element={<Upgrade/>}/>
+        <Route path="/signin" element={<SignIn/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
       <Footer />
      </HashRouter>
